@@ -1,0 +1,11 @@
+app:
+  name: smpp-proxy
+  role: smpp-proxy
+
+identityModuleConfiguration:
+  dynamoDbConfiguration:
+    local: ${DYNAMODB_LOCAL:-false}
+    retries: ${DYNAMODB_RETRIES:-3}
+    region: ${DYNAMODB_REGION:-us-east-1}
+    endpoint: ${DYNAMODB_ENDPOINT:-http://localhost:4569}
+    tableName: ${DYNAMODB_TABLE_NAME:-smpp.identity}

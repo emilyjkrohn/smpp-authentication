@@ -1,0 +1,11 @@
+app:
+  name: smpp-proxy
+  role: smpp-proxy
+
+identityModuleConfiguration:
+  dynamoDbConfiguration:
+    local: true
+    retries: 5
+    region: us-east-1
+    endpoint: "http://localhost:4566"
+    tableName: smpp.identity
